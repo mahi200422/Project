@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movie Theater 🎬</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="movie-screen">
+    <div class="title-with-lights">
+        <div class="blinking-lights-around-title">
+            <span class="light"></span>
+            <span class="light"></span>
+            <span class="light"></span>
+            <span class="light"></span>
+        </div>
+        <h1 class="animated-title">Mahsa Ansari's Movie Theater🎥🍿</h1>
+    </div>
+        <div class="video-container">
+            <video controls width="640" height="360">
+                <source src="media\trailer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="controls">
+            <button class="button" id="rateusButton">Rate Us</button>
+            <a href="media\trailer.mp4" download="movie_trailer.mp4" class="button">Download This Trailer</a>
+            <button class="button" onclick="document.querySelector('video').play()">Play Again</button>
+        </div>
+        <div id="message-container"></div>
+    </div>
+
+    <script>
+        document.getElementById('rateusButton').addEventListener('click', function() {
+            document.getElementById('message-container').textContent = 'Thank you for your attention';
+        });
+    </script>
+</body>
+</html>
